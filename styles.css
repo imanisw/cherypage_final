@@ -17,22 +17,40 @@ You will find this is far easier than the opposite task of using CSS to cram you
 body,
 html{
 
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
     text-align: left;
     overflow-y: auto;
 }
-
-.container{
-    position: relative;
-    width: 60%;
+.row {
     display: flex;
 }
-
+.column {
+    /*flex: 33.33%;*/
+    height: 800px;
+    width: 800px;
+    padding: 0px;
+    margin: 10px;
+    margin-bottom: 10;
+}
+.column_l{
+    height: 800px;
+    width: 800px;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    display: relative;
+    float: left; 
+}
+.scroll-bar{
+    justify-content: left;
+    margin-top: 31px;
+}
 .container section{
- min-width: 60%;
+ max-width: 800px;
  height: auto;  
   display: flex;
   justify-content: flex-end;
@@ -86,10 +104,12 @@ html{
 .scroll-bar{
     height: 100%;
     width: 800px;
-    border:1px soild grey;
+    margin: 15px; 
+    border:5px soild grey;
     font-family: sans-serif;
     overflow: auto;
-    text-align: center;
+    text-align: left;
+    margin-top: 0mm;
 
 }
 /*********************************************************************
