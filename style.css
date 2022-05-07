@@ -1,0 +1,139 @@
+style.css 
+/*
+This is a g good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+body,
+html{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.container{
+    position: relative;
+    width: 60%;
+    display: flex;
+}
+
+.container section{
+ min-width: 60%;
+ height: auto;  
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.dot{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot .inner,
+.dot .close{
+    display: none;
+}
+
+.annotate{
+    position: relative;
+}
+
+.red{
+    background-color: rgba(228, 31, 67, 0.65);
+}
+
+
+#camera:not(.active) {
+    top: 30%;
+    left: 60%;
+}
+
+.dot.active{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    right: 1;
+    left: 1;
+    bottom: 0;
+
+}
+
+.dot.active .inner, 
+.dot.active .close {
+    display: block;
+}
+
+.scroll-bar{
+    height: 100%;
+    width: 800px;
+    border:1px soild grey;
+    font-family: sans-serif;
+    overflow: auto;
+    text-align: center;
+
+}
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 769px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+}
+
+
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 805px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 0;
+    }
+}
+
+
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 1205px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
+}
